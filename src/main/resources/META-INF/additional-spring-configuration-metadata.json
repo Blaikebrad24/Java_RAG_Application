@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "etl.pipeline.DataStorage.dataPath",
+    "type": "java.lang.String",
+    "description": "A description for 'etl.pipeline.DataStorage.dataPath'"
+  },
+  {
+    "name": "etl.pipeline.DataStorage.dataPath",
+    "type": "java.lang.String",
+    "description": "A description for 'etl.pipeline.DataStorage.dataPath'"
+  },
+  {
+    "name": "etl.pipeline.DataStorage.dataPath",
+    "type": "java.lang.String",
+    "description": "A description for 'etl.pipeline.DataStorage.dataPath'"
+  },
+  {
+    "name": "etl.pipeline.DataStorage.dataPath",
+    "type": "java.lang.String",
+    "description": "A description for 'etl.pipeline.DataStorage.dataPath'"
+  }
+]}
