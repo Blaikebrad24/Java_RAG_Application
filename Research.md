@@ -42,4 +42,8 @@
     in that space. The database uses specialized indexing algorithms and distance metrics to efficiently find the nearest
     neighbors to a given query vector.
 
-  
+  ### Notes ###
+The key property is that text chunks with similar meaning end up with similar vectors (close together in that 384-dimensional space). So when you do a similarity search, you're finding chunks whose meaning is close to your query — not matching characters or keywords.
+
+So in your pipeline: Tika reads the document, the TokenTextSplitter breaks it into chunks, and then the transformers model converts each chunk into one float[384] array that captures its semantic meaning. That array is what gets stored in the embedding column.
+  ### Notes ###
