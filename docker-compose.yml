@@ -4,10 +4,11 @@ networks:
 
 volumes:
   pgvector_data:
+  ollama_data:
 
 
 # ==============
-# PG Vector Docker Container 
+# PG Vector Docker Container
 # ==============
 
 services:
@@ -29,3 +30,18 @@ services:
       - rag-network
     healthcheck:
       test: ["CMD-SHELL", "pgvector_isready -U postgres"]
+
+# ==============
+# Ollama Local LLM Container
+# ==============
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: rag-ollama
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - rag-network
